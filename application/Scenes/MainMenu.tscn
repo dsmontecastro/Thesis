@@ -1,0 +1,337 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Main" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -200.0
+margin_right = 125.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panels" type="VBoxContainer" parent="Main"]
+margin_left = 68.0
+margin_top = 65.0
+margin_right = 182.0
+margin_bottom = 235.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NamePanel" type="PanelContainer" parent="Main/Panels"]
+margin_right = 114.0
+margin_bottom = 28.0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Main/Panels/NamePanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 107.0
+margin_bottom = 21.0
+size_flags_vertical = 0
+text = "P2P Prototype"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPanel" type="PanelContainer" parent="Main/Panels"]
+margin_top = 32.0
+margin_right = 114.0
+margin_bottom = 170.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="Main/Panels/ButtonPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 107.0
+margin_bottom = 131.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="-0" type="HSeparator" parent="Main/Panels/ButtonPanel/Buttons"]
+margin_right = 100.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 100, 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CreateLobby" type="Button" parent="Main/Panels/ButtonPanel/Buttons"]
+margin_top = 14.0
+margin_right = 100.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 100, 0 )
+text = "Host"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="-1" type="HSeparator" parent="Main/Panels/ButtonPanel/Buttons"]
+margin_top = 38.0
+margin_right = 100.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 100, 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FindLobby" type="Button" parent="Main/Panels/ButtonPanel/Buttons"]
+margin_top = 52.0
+margin_right = 100.0
+margin_bottom = 72.0
+text = "Join"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="-2" type="HSeparator" parent="Main/Panels/ButtonPanel/Buttons"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 100, 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Quit" type="Button" parent="Main/Panels/ButtonPanel/Buttons"]
+margin_top = 90.0
+margin_right = 100.0
+margin_bottom = 110.0
+text = "Quit"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="-3" type="HSeparator" parent="Main/Panels/ButtonPanel/Buttons"]
+margin_top = 114.0
+margin_right = 100.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 100, 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Lobby" type="CenterContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -200.0
+margin_right = 125.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panels" type="VBoxContainer" parent="Lobby"]
+margin_left = 78.0
+margin_top = 122.0
+margin_right = 172.0
+margin_bottom = 178.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NamePanel" type="PanelContainer" parent="Lobby/Panels"]
+margin_right = 104.0
+margin_bottom = 28.0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LobbyTitle" type="Label" parent="Lobby/Panels/NamePanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 97.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 90, 0 )
+size_flags_vertical = 0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerPanel" type="PanelContainer" parent="Lobby/Panels"]
+margin_top = 32.0
+margin_right = 104.0
+margin_bottom = 78.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Players" type="VBoxContainer" parent="Lobby/Panels/PlayerPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 97.0
+margin_bottom = 39.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="HBoxContainer" parent="Lobby/Panels"]
+margin_top = 82.0
+margin_right = 104.0
+margin_bottom = 102.0
+
+[node name="LeaveLobby" type="Button" parent="Lobby/Panels/Buttons"]
+margin_right = 50.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Leave"
+
+[node name="StartGame" type="Button" parent="Lobby/Panels/Buttons"]
+margin_left = 54.0
+margin_right = 104.0
+margin_bottom = 20.0
+size_flags_horizontal = 11
+text = "Start"
+
+[node name="LobbyList" type="CenterContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panels" type="VBoxContainer" parent="LobbyList"]
+margin_left = 424.0
+margin_top = 229.0
+margin_right = 599.0
+margin_bottom = 371.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NamePanel" type="PanelContainer" parent="LobbyList/Panels"]
+margin_right = 175.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 175, 0 )
+size_flags_vertical = 0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Available" type="Label" parent="LobbyList/Panels/NamePanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 168.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 90, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Available Lobbies:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollList" type="ScrollContainer" parent="LobbyList/Panels"]
+margin_top = 32.0
+margin_right = 175.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 170, 100 )
+scroll_horizontal_enabled = false
+
+[node name="Lobbies" type="VBoxContainer" parent="LobbyList/Panels/ScrollList"]
+margin_right = 175.0
+size_flags_horizontal = 3
+
+[node name="Buttons" type="HBoxContainer" parent="LobbyList/Panels"]
+margin_top = 136.0
+margin_right = 175.0
+margin_bottom = 156.0
+
+[node name="Back" type="Button" parent="LobbyList/Panels/Buttons"]
+margin_right = 85.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 85, 0 )
+text = "Back"
+
+[node name="Refresh" type="Button" parent="LobbyList/Panels/Buttons"]
+margin_left = 89.0
+margin_right = 175.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 85, 0 )
+size_flags_horizontal = 11
+text = "Refresh"
+
+[node name="Status" type="CanvasLayer" parent="."]
+
+[node name="Margin" type="MarginContainer" parent="Status"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -500.0
+margin_top = -20.0
+grow_horizontal = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Status/Margin"]
+autostart = true
+
+[node name="Label" type="Label" parent="Status/Margin"]
+margin_right = 500.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 500, 20 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Welcome!"
+align = 2
+valign = 1
+autowrap = true
+
+[connection signal="pressed" from="Main/Panels/ButtonPanel/Buttons/CreateLobby" to="." method="_on_CreateLobby_pressed"]
+[connection signal="pressed" from="Main/Panels/ButtonPanel/Buttons/FindLobby" to="." method="_on_FindLobby_pressed"]
+[connection signal="pressed" from="Main/Panels/ButtonPanel/Buttons/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Lobby/Panels/Buttons/LeaveLobby" to="." method="_on_LeaveLobby_pressed"]
+[connection signal="pressed" from="Lobby/Panels/Buttons/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="LobbyList/Panels/Buttons/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="LobbyList/Panels/Buttons/Refresh" to="." method="_on_Refresh_pressed"]
